@@ -9,8 +9,52 @@ body {
   color: #33333a;
 }
 
+p {
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  align-content: center;
+}
+
 .bg-primary {
   background: #ffaf5d;
+}
+
+.container {
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: #ffaf5d;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.section-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.section-paragraph {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem 5rem;
 }
 
 .navbar {
@@ -40,6 +84,9 @@ body {
 
 .navbar .menu .logo a {
   text-decoration: none;
+  line-height: 1.2rem;
+  font-weight: 300;
+  text-shadow: none;
   color: #f4f4f4;
 }
 
@@ -55,6 +102,9 @@ body {
 
 .navbar .menu ul li a {
   text-decoration: none;
+  line-height: 1.2rem;
+  font-weight: 300;
+  text-shadow: none;
   color: #f4f4f4;
 }
 
@@ -78,6 +128,9 @@ body {
 
 .navbar .social ul li a {
   text-decoration: none;
+  line-height: 1.2rem;
+  font-weight: 300;
+  text-shadow: none;
   color: #f4f4f4;
 }
 
@@ -140,6 +193,9 @@ body {
 
 .main a {
   text-decoration: none;
+  line-height: 1.2rem;
+  font-weight: 300;
+  text-shadow: none;
   color: #f4f4f4;
 }
 
@@ -148,26 +204,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.about h2 {
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 400;
-  font-size: 2rem;
-  margin: 2.5rem 0;
-}
-
-.about .container > p {
-  text-align: center;
-  font-weight: 300;
-  margin: 1rem 0;
-  font-size: 1.1rem;
-  padding: 1rem 5rem;
-}
-
-.about .container {
-  max-width: 70%;
+  margin-bottom: 5rem;
+  align-content: center;
 }
 
 .about .boxes {
@@ -185,10 +223,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   flex-basis: 1;
   min-width: 33%;
   border-radius: 0.2rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .about .boxes .box h3 {
@@ -199,5 +237,121 @@ body {
 .about .boxes .box p {
   padding: 1rem;
   font-weight: 300;
+}
+
+.nova {
+  /*HEREE------------*/
+}
+
+.nova .tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  background: #5dadff;
+  border-radius: 0.2rem;
+  margin: 0 1rem;
+  padding: 0.6rem;
+  opacity: 1;
+  min-height: 3rem;
+  z-index: 1;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.nova .tabs .tab {
+  display: block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nova .tabs .tab a {
+  text-decoration: none;
+  line-height: 1.2rem;
+  font-weight: 300;
+  text-shadow: none;
+  color: #f4f4f4;
+}
+
+.nova .tabs .tab a {
+  text-align: center;
+  width: 100%;
+  display: block;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+}
+
+.nova .tabs .tab a.selected {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.nova .box {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  min-height: 10rem;
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1.5rem;
+  padding: 2rem 4rem;
+  color: #33333a;
+}
+
+.nova .box i {
+  margin: 3rem;
+  color: #ffaf5d;
+  min-width: 3rem;
+}
+
+.quote {
+  height: 25rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background: url("../img/sc-bg.jpg") center center/cover;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.quote .container {
+  align-items: flex-end;
+}
+
+.quote p {
+  font-size: 4rem;
+  color: #f4f4f4;
+  text-shadow: 1px 1px 2px #33333a;
+}
+
+.quote p::before {
+  content: '"';
+}
+
+.quote p::after {
+  content: '"';
+}
+
+.quote span {
+  color: #f4f4f4;
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px #33333a;
+}
+
+.quote span::before {
+  content: '- ';
 }
 /*# sourceMappingURL=main.css.map */

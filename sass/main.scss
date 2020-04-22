@@ -1,49 +1,5 @@
 @import 'variables';
-
-@mixin link {
-  a {
-    text-decoration: none;
-    color: $light-color;
-  }
-}
-
-@mixin list-item {
-  list-style: none;
-}
-
-@mixin thick {
-  font-weight: 700;
-}
-
-@mixin thin {
-  font-weight: 100;
-}
-
-@mixin hover {
-  &:hover {
-    background: $dark-color-hover;
-  }
-}
-
-@mixin section-title {
-  h2 {
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 400;
-    font-size: 2rem;
-    margin: 2.5rem 0;
-  }
-}
-
-@mixin section-paragraph {
-  .container > p {
-    text-align: center;
-    font-weight: 300;
-    margin: 1rem 0;
-    font-size: 1.1rem;
-    padding: 1rem 5rem;
-  }
-}
+@import 'mixins';
 
 * {
   margin: 0;
@@ -57,9 +13,44 @@ body {
 
 }
 
+p {
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  align-content: center;
+}
+
 .bg-primary {
   background: $primary-color;
 }
+
+.container {
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+.hidden {
+  display: none!important;
+}
+
+@include section-title;
+@include section-paragraph;
+
 
 .navbar {
   z-index: 2;
@@ -180,12 +171,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @include section-title;
-  @include section-paragraph;
-
-  .container {
-    max-width: 70%;
-  }
+  margin-bottom: 5rem;
+  align-content: center;
 
   .boxes {
     display: flex;
@@ -201,10 +188,10 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
       flex-basis: 1;
       min-width: 33%;
-      border-radius: 0.2rem;
+      border-radius: $border-radius;
+      @include box-shadow;
 
       h3 {
         padding-top: 1rem;
@@ -220,6 +207,119 @@ body {
 
   }
 
+
+}
+
+.nova {
+/*HEREE------------*/
+  
+  .tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    @include list-item;
+    background: $secondary-color;
+    border-radius: $border-radius;
+    margin: 0 1rem;
+    padding: 0.6rem;
+    opacity: 1;
+    min-height: 3rem;
+    z-index: 1;
+    @include box-shadow;
+    
+    .tab {
+      display:block;
+      @include link;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        text-align: center;
+        width: 100%;
+        display: block;
+        border-radius: $border-radius;
+
+        padding: 0.5rem;
+        &.selected {
+          background: rgba(0,0,0,.2);
+        }
+      }
+      
+    }
+  }
+
+
+  .box {
+    @include box-shadow;
+    min-height: 10rem;
+    border-radius: $border-radius;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1.5rem;
+    padding: 2rem 4rem;
+    color: $dark-font-color;
+
+    i {
+      margin: 3rem;
+      color: $primary-color;
+      min-width: 3rem;
+    }
+  }
+}
+
+.quote {
+  height: 25rem;
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background: url('../img/sc-bg.jpg') center center/cover;
+    background-attachment: fixed;
+    z-index: -1;
+  }
+
+  .container {
+    align-items: flex-end;
+  }
+
+  p {
+    font-size: 4rem;
+    color: $light-color;
+    @include text-shadow;        
+    &::before {
+      content: '"';
+    }
+
+    &::after {
+      content: '"';
+    }
+
+  }
+
+  span {
+    color: $light-color;
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px $dark-font-color; 
+
+    &::before {
+      content: '- ';
+    }
+  }
 
 }
 
