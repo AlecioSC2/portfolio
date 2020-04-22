@@ -70,6 +70,32 @@ a {
   justify-content: space-around;
 }
 
+.navbar ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li:hover {
+  background: #7c7c7c;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  line-height: 1.2rem;
+  font-weight: 300;
+  text-shadow: none;
+  color: #f4f4f4;
+}
+
+.navbar ul li a {
+  display: inline-block;
+  padding: 1.5rem 0.6rem;
+}
+
 .navbar .menu {
   display: flex;
 }
@@ -83,50 +109,6 @@ a {
 }
 
 .navbar .menu .logo a {
-  text-decoration: none;
-  line-height: 1.2rem;
-  font-weight: 300;
-  text-shadow: none;
-  color: #f4f4f4;
-}
-
-.navbar .menu ul {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.navbar .menu ul li {
-  padding: 1.5rem 0.6rem;
-  list-style: none;
-}
-
-.navbar .menu ul li a {
-  text-decoration: none;
-  line-height: 1.2rem;
-  font-weight: 300;
-  text-shadow: none;
-  color: #f4f4f4;
-}
-
-.navbar .menu ul li:hover {
-  background: #7c7c7c;
-}
-
-.navbar .social ul {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.navbar .social ul li {
-  list-style: none;
-  padding: 1.5rem 0.6rem;
-}
-
-.navbar .social ul li:hover {
-  background: #7c7c7c;
-}
-
-.navbar .social ul li a {
   text-decoration: none;
   line-height: 1.2rem;
   font-weight: 300;

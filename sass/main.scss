@@ -64,6 +64,22 @@ a {
   padding: 0 1rem;
   justify-content: space-around;
 
+  ul {
+    display:flex;
+    justify-content: space-evenly;
+
+    li {
+      @include list-item;
+      @include hover;
+      @include link;
+
+      a {
+        display:inline-block;
+        padding: 1.5rem 0.6rem;
+      }
+    }
+  }
+
   .menu {
     display: flex;
 
@@ -74,33 +90,6 @@ a {
       font-weight: 600;
       text-transform: lowercase;
       @include link;
-      
-    }
-
-    ul {
-      display:flex;
-      justify-content: space-evenly;
-
-      li {
-        padding: 1.5rem 0.6rem;
-        @include list-item;
-        @include link;
-        @include hover;
-
-      }
-    }
-  }
-
-  .social {
-    ul {
-      display:flex;
-      justify-content: space-evenly;
-      li {
-        @include list-item;
-        padding: 1.5rem 0.6rem;
-        @include hover;
-        @include link;
-      }
     }
   }
 }
