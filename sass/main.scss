@@ -23,7 +23,7 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3rem;
+  padding: 3rem 0;
   align-content: center;
 }
 
@@ -31,8 +31,11 @@ section {
   background: $primary-color;
 }
 
+.bg-light {
+  background: $light-color;
+}
 .container {
-  max-width: 70%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,12 +51,22 @@ a {
   display: none!important;
 }
 
-@include section-title;
-@include section-paragraph;
+.section-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
+.section-paragraph {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 1rem 5rem;
+  }
 
 .navbar {
-  z-index: 2;
+  z-index: 10;
   position: sticky;
   top: 0;
   left: 0;
@@ -94,8 +107,8 @@ a {
   }
 }
 
-.main {
-  height: 100vh;
+#main {
+  height: 98vh;
   position: relative;
   display:flex;
   flex-direction: column;
@@ -107,12 +120,11 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: -4rem;
 
     width: 100%;
     height: 100%;
     opacity: 0.5;
-    background: url('../img/background.jpg') center center/cover;
+    background: url('./img/background.jpg') center center/cover;
     background-attachment: fixed;
     z-index: -1;
   }
@@ -155,7 +167,7 @@ a {
 
 }
 
-.about {
+#about {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -176,11 +188,12 @@ a {
       text-align: center;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      flex-basis: 1;
+      justify-content: end;
       min-width: 33%;
+      min-height: 10rem;
       border-radius: $border-radius;
       @include box-shadow;
+
 
       h3 {
         padding-top: 1rem;
@@ -199,8 +212,7 @@ a {
 
 }
 
-.nova {
-/*HEREE------------*/
+#hobbies {
   
   .tabs {
     display: flex;
@@ -214,6 +226,7 @@ a {
     opacity: 1;
     min-height: 3rem;
     z-index: 1;
+    
     @include box-shadow;
     
     .tab {
@@ -243,6 +256,7 @@ a {
   .box {
     @include box-shadow;
     min-height: 10rem;
+    min-width: 100%;
     border-radius: $border-radius;
     display:flex;
     flex-direction: row;
@@ -251,6 +265,7 @@ a {
     margin-top: -1.5rem;
     padding: 2rem 4rem;
     color: $dark-font-color;
+    background: #FFF;
 
     i {
       margin: 3rem;
@@ -277,13 +292,13 @@ a {
     width: 100%;
     height: 100%;
     opacity: 0.8;
-    background: url('../img/sc-bg.jpg') center center/cover;
+    background: url('./img/sc-bg.jpg') center center/cover;
     background-attachment: fixed;
     z-index: -1;
   }
 
   .container {
-    align-items: flex-end;
+    align-items: center;
   }
 
   p {
@@ -304,12 +319,60 @@ a {
     color: $light-color;
     font-size: 2rem;
     text-shadow: 1px 1px 2px $dark-font-color; 
+    margin-left: 28rem;
 
     &::before {
       content: '- ';
     }
   }
 
+}
+
+#projects {
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+
+    figure {
+      @include box-shadow;
+      height: 100%;
+
+      a {
+        position: relative;
+
+        figcaption {
+          display: block;
+          position: absolute;
+          top: -2.2rem;
+          left: 0;
+          width: 100%;
+          z-index: 2;
+          padding: 1rem;
+
+          &::before {
+            content: '';
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: $dark-color;
+            opacity: 0.6;
+          }
+
+        }
+  
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      
+    }
+  }
 }
 
 

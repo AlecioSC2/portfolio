@@ -13,9 +13,9 @@
     <div class="menu">
       <div class="logo"><a href="#">Palec.io</a></div>
       <ul>
-        <li><a href="#home">Home</a> </li>
+        <li><a href="#">Home</a> </li>
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -31,29 +31,29 @@
       </ul>
     </div>
   </nav>
-  <main id="main" class="main">
+  <main id="main">
       <h1>Pablo Alecio <span class="thin">(aka Pale)</span></h1>
       <h5>Sr. AEM Consultant <span class="thick">/</span> Full Stack Dev <span class="thick">/</span> StarCraft 2 enthusiast</h5>
       <a href="#about">
       <i class="fas fa-chevron-down "></i></a>
       </main>
 
-  <section id="about" class="about">
+  <section id="about" >
     <div class="container">
       <h2 class="section-title">About Me</h2>
-    <p class="section-paragraph">Guatemalan born and raised. I have worked for almost 10 years delivering and leading AEM implementations and as a hobby I have been playing
-      StarCraft 2, the hardest 1vs1 esport for 10 years, becoming one of the best Guatemalan players and representing my country in several tournaments. 
-    </p>
+      <p class="section-paragraph">Guatemalan born and raised. I have worked for almost 10 years delivering and leading AEM implementations. I'm also a 
+        full stack developer using mostly JavaScript related technologies. 
+      </p>
     <div class="boxes">
       <div class="box box-1">
-        <i class="fab fa-adobe fa-3x"></i>
-        <h3>Sr. AEM Consultant</h3>
-        <p> Certified AEM Developer and Lead Developer. </p>
-      </div>
-      <div class="box bg-primary box-2">
         <i class="fas fa-code fa-3x"></i>
         <h3>Full Stack Developer</h3>
         <p>CSS, HTML, React, Nodejs, Apache Web Server among many other technologies.</p>
+      </div>
+      <div class="box bg-primary box-2">
+        <i class="fab fa-adobe fa-3x"></i>
+        <h3>Sr. AEM Consultant</h3>
+        <p> Certified AEM Developer and Lead Developer.</p>
       </div>
       <div class="box box-3">
         <i class="far fa-star fa-3x"></i>
@@ -69,30 +69,53 @@
       <span>WhiteRa</span>
     </div>
   </section>
-  <section class="nova">
+  <section id="hobbies" class="bg-light">
     <div class="container">
       <h2 class="section-title">
-        Nova
+        Hobbies
       </h2>
       <p class="section-paragraph">
-        I created Nova as a Computer Science graduation project. Nova is a JavaScript framework based on <a href="https://xumak.com" targe="_blank">XumaK</a>'s Danta. It provides a mechanism where the business logic is constructed as modular, granular and reusable pieces called Context Processors, has a simple and clear API which is independent from any particular technology and allows to easily test the logic either piece by piece or several pieces in conjunction.
+        My three main hobbies are playing and watching competitive StarCraft 2, hiking and learning languages.
       </p>
       <ul class="tabs">
-        <li class="tab tab-1"><a class="selected" href="#" data-tab="1"> Nova Core</a></li>
-        <li class="tab tab-2"><a href="#" data-tab="2"> Nova Server</a></li>
-        <li class="tab tab-3"><a href="#" data-tab="3"> Nova Firebase</a></li>
+        <li class="tab tab-1"><a class="selected" href="#" data-tab="1"> StarCraft 2</a></li>
+        <li class="tab tab-2"><a href="#" data-tab="2"> Hiking</a></li>
+        <li class="tab tab-3"><a href="#" data-tab="3"> Languages</a></li>
       </ul>
       <div class="box box-1" data-tab="1">
-        <i class="far fa-file-code fa-3x"></i>
-        <p>Nova Core contains the framework engine. Can be used by itself or in conjunction with Nova Server and Nova Firebase.</p>
+        <i class="far fa-star fa-3x"></i>
+        <p>
+          After playing StarCraft: Brood War for several years, I started playing StarCraft 2 since it came out in 2010 and watching competitive games shortly afterd. I have reached Masters league in several occasions as a Terran player. 
+          I have a very small stream where I try to teach Terran strategies mostly to a spanish speaking audience. I'm currently part of the 'Next Gaming' team.
+        </p>
       </div>
       <div class="box box-2 hidden" data-tab="2">
-        <i class="fas fa-server fa-3x"></i>
-        <p>Nova Server is a lightweight web server using Expressjs that enables building web APIs with Nova.</p>
+        <i class="fas fa-hiking fa-3x"></i>
+        <p> 
+          I started hiking when I was around 14 years old and took it very seriously for several years. I was a mountain guide from 2010 to 2012. I've climbed mountains and volcanoes in Guatemala, Mexico, El Salvador, Colombia, Ecuador, Perú and Argentina.
+          Currently, due to recurring knee injuries I haven't been as active, but I'm always dreaming of coming back.
+        </p>
       </div>
       <div class="box hidden" data-tab="3">
-        <i class="fas fa-fire fa-3x"></i>
-        <p>Nova Firebase is a lightweight wrapper that enables the use of the Nova framework in Firebase Functions.</p>
+        <i class="fas fa-language fa-3x"></i>
+        <p>
+          I speak Spanish, English, French and I'm currently learning German. Spanish is my native tongue, I learned
+          English and French at school and I started learning German about a year ago; I'm currently at an A2 level. Deutsch lernen macht viel Spaß!
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+      <p class="section-paragraph"> 
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum incidunt eos aperiam aspernatur quis porro quibusdam rerum, quas sapiente fuga.
+      </p>
+      <div class="gallery">
+        <figure class="image"><a href="#"><img src="./images/Nova-Core.jpg" alt="Nova Core"><figcaption>Nova Core</figcaption></a></figure>
+        <figure class="image"><a href="#"><img src="./images/Nova-Server.jpg" alt="Nova Server"><figcaption>Nova Server</figcaption></a></figure>
+        <figure class="image"><a href="#"><img src="./images/Nova-Firebase.jpg" alt="Nova Firebase"><figcaption>Nova Firebase</figcaption></a></figure>
       </div>
     </div>
   </section>
