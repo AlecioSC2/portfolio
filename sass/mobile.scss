@@ -75,6 +75,7 @@
 
       .box {
         width: 100%;
+        flex: none;
       }
     }
   }
@@ -125,12 +126,30 @@
       }
     }
     
-    
   }
+
+  footer {
+    ul {
+      li {
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  
 
 }
 
 @media only screen and (max-width: 600px) {
+
+  #main {
+    h5 {
+      span {
+        display: none;
+      }
+    }
+  }
   #hobbies {
     .box{
       justify-content: flex-start;

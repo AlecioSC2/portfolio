@@ -50,6 +50,7 @@
   }
   #contact .boxes .box {
     width: 100%;
+    flex: none;
   }
   header #navbar {
     width: 70%;
@@ -90,9 +91,15 @@
     display: flex;
     align-items: center;
   }
+  footer ul li a {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
+  #main h5 span {
+    display: none;
+  }
   #hobbies .box {
     justify-content: flex-start;
     flex-direction: column;
