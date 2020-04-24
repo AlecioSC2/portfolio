@@ -1,4 +1,4 @@
-const onClick = event => {
+const tabOnClick = event => {
   event.preventDefault();
   const tab = event.target.dataset.tab; //the tab id
 
@@ -26,4 +26,18 @@ const links = document.querySelectorAll('.tab a');
 Array
 .from(links)
 .forEach(link => 
-  link.addEventListener("click", onClick))
+  link.addEventListener("click", tabOnClick))
+
+let isOpen = false;
+const hamburgerOnClick = event => {
+  if (!isOpen) {
+    isOpen = true;
+    document.querySelector('#navbar .menu').classList.remove('hidden-mobile');
+  } else {
+    isOpen = false;
+    document.querySelector('#navbar .menu').classList.add('hidden-mobile');
+
+  }
+  
+}
+document.getElementById('hamburger').addEventListener("click", hamburgerOnClick);

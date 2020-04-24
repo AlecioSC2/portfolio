@@ -7,36 +7,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900" rel="stylesheet">
   <script src="https://kit.fontawesome.com/8a92de8c2a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./dist/css/main.css">
+  <link rel="stylesheet" href="./dist/css/mobile.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="menu">
-      <div class="logo"><a href="#">Palec.io</a></div>
-      <ul>
-        <li><a href="#">Home</a> </li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#hobbies">Hobbies</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="social">
-      <ul>
-        <li><a href="https://twitter.com/PaleSC2" target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/pablo-alecio-5985864a/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a></li>
-        <li><a href="https://www.twitch.tv/palesc2" target="_blank"><i class="fab fa-twitch fa-lg"></i> </a></li>
-        <li><a href="https://github.com/PaleSC2" target="_blank"><i class="fab fa-github fa-lg" ></i> </a></li>
-        <li><a href="https://starcraft2.com/en-gb/profile/1/1/10826406" target="_blank"><i class="fab fa-battle-net fa-lg"></i></i> </a></li>
+  <header>
+    <nav id="navbar">
+      <div class="mobile-wrapper">
+        <div class="logo"><a href="#">Palec.io</a></div>
+        <div id="hamburger"> <i class="fa fa-bars fa-lg"></i> </div>
+      </div>
+      
+      <div class="menu hidden-mobile">
+        <ul class="navigation">
+          <li><a href="#">Home</a> </li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <ul class="social">
+          <li><a href="https://twitter.com/PaleSC2" target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/pablo-alecio-5985864a/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a></li>
+          <li><a href="https://www.twitch.tv/palesc2" target="_blank"><i class="fab fa-twitch fa-lg"></i> </a></li>
+          <li><a href="https://github.com/PaleSC2" target="_blank"><i class="fab fa-github fa-lg" ></i> </a></li>
+          <li><a href="https://starcraft2.com/en-gb/profile/1/1/10826406" target="_blank"><i class="fab fa-battle-net fa-lg"></i></i> </a></li>
+        </ul>
+      </div>
 
-      </ul>
-    </div>
-  </nav>
+    </nav>
+  </header>
   <main id="main">
+    <div class="container">
       <h1>Pablo Alecio <span class="thin">(aka Pale)</span></h1>
       <h5>Sr. AEM Consultant <span class="thick">/</span> Full Stack Dev <span class="thick">/</span> StarCraft 2 enthusiast</h5>
       <a href="#about">
       <i class="fas fa-chevron-down "></i></a>
-      </main>
+    </div>
+  </main>
 
   <section id="about" >
     <div class="container">
@@ -63,7 +70,7 @@
     </div>
     </div>
   </section>
-  <section class="quote">
+  <section id="quote">
     <div class="container">
       <p>More GG, more skill.</p>
       <span>WhiteRa</span>
@@ -82,14 +89,14 @@
         <li class="tab tab-2"><a href="#" data-tab="2"> Hiking</a></li>
         <li class="tab tab-3"><a href="#" data-tab="3"> Languages</a></li>
       </ul>
-      <div class="box box-1" data-tab="1">
+      <div class="box" data-tab="1">
         <i class="far fa-star fa-3x"></i>
         <p>
           After playing StarCraft: Brood War for several years, I started playing StarCraft 2 since it came out in 2010 and watching competitive games shortly afterd. I have reached Masters league in several occasions as a Terran player. 
           I have a very small stream where I try to teach Terran strategies mostly to a spanish speaking audience. I'm currently part of the 'Next Gaming' team.
         </p>
       </div>
-      <div class="box box-2 hidden" data-tab="2">
+      <div class="box hidden" data-tab="2">
         <i class="fas fa-hiking fa-3x"></i>
         <p> 
           I started hiking when I was around 14 years old and took it very seriously for several years. I was a mountain guide from 2010 to 2012. I've climbed mountains and volcanoes in Guatemala, Mexico, El Salvador, Colombia, Ecuador, Perú and Argentina.
@@ -108,18 +115,79 @@
   <!-- Projects -->
   <section id="projects">
     <div class="container">
-      <h2 class="section-title">My Projects</h2>
+      <h2 class="section-title">Projects</h2>
       <p class="section-paragraph"> 
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum incidunt eos aperiam aspernatur quis porro quibusdam rerum, quas sapiente fuga.
+        I created a framework called Nova that makes web development simpler. It can be used by itself, 
+        with Expressjs or as a Firebase Function. Check it out!
       </p>
       <div class="gallery">
-        <figure class="image"><a href="#"><img src="./images/Nova-Core.jpg" alt="Nova Core"><figcaption>Nova Core</figcaption></a></figure>
-        <figure class="image"><a href="#"><img src="./images/Nova-Server.jpg" alt="Nova Server"><figcaption>Nova Server</figcaption></a></figure>
-        <figure class="image"><a href="#"><img src="./images/Nova-Firebase.jpg" alt="Nova Firebase"><figcaption>Nova Firebase</figcaption></a></figure>
+        <figure class="image"><a href="https://github.com/PaleSC2/nova-core" target="_blank"><img src="./images/Nova-Core.jpg" alt="Nova Core"><figcaption>Nova Core</figcaption></a></figure>
+        <figure class="image"><a href="https://github.com/PaleSC2/nova-server" target="_blank"><img src="./images/Nova-Server.jpg" alt="Nova Server"><figcaption>Nova Server</figcaption></a></figure>
+        <figure class="image"><a href="https://github.com/PaleSC2/nova-firebase" target="_blank"><img src="./images/Nova-Firebase.jpg" alt="Nova Firebase"><figcaption>Nova Firebase - Soon </figcaption></a></figure>
       </div>
     </div>
   </section>
-  <section style="height:100vh;"></section>
+
+  <section id="contact" class="bg-light">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <p class="section-paragraph"> 
+        You can reach me by email or DM in any of the platforms listed below.
+      </p>
+      <div class="boxes">
+        <div class="box">
+          <a href="mailto:pale.starcraft2@gmail.com">
+            <i class="fas fa-envelope"></i>
+            <p>pale.starcraft2</p>
+            <p>@gmail.com</p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="https://twitter.com/PaleSC2" target="_blank">
+            <i class="fab fa-twitter"></i>
+            <p>@PaleSC2</p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="https://www.linkedin.com/in/pablo-alecio-5985864a/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+            <p>Pablo Alecio</p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="https://www.twitch.tv/palesc2" target="_blank">
+            <i class="fab fa-twitch"></i>
+            <p>PaleSC2</p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="https://github.com/PaleSC2" target="_blank">
+            <i class="fab fa-github"></i>
+            <p>PaleSC2</p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="https://starcraft2.com/en-gb/profile/1/1/10826406" target="_blank">
+            <i class="fab fa-battle-net"></i>
+            <p>Pale#11856</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-primary">
+    <div class="social">
+      <ul>
+        <li><a href="https://twitter.com/PaleSC2" target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/pablo-alecio-5985864a/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a></li>
+        <li><a href="https://www.twitch.tv/palesc2" target="_blank"><i class="fab fa-twitch fa-lg"></i> </a></li>
+        <li><a href="https://github.com/PaleSC2" target="_blank"><i class="fab fa-github fa-lg" ></i> </a></li>
+        <li><a href="https://starcraft2.com/en-gb/profile/1/1/10826406" target="_blank"><i class="fab fa-battle-net fa-lg"></i></i> </a></li>
+      </ul>
+    </div>
+    <div class="copyright">Copyright © 2020. All rights reserved. | Design inspired in mdbootstrap.com's <a href="https://mdbootstrap.com/previews/templates/portfolio/html/web-developer.html" target="_blank"> Web Developer Portfolio</a>.</div>
+  </footer>
   <!-- JavaScript-->
   <script src="dist/js/script.js"></script>
 </body>

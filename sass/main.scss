@@ -39,7 +39,6 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 a {
@@ -54,7 +53,7 @@ a {
 .section-title {
   text-transform: uppercase;
   text-align: center;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 3rem;
   margin-bottom: 1rem;
 }
@@ -65,7 +64,7 @@ a {
     padding: 1rem 5rem;
   }
 
-.navbar {
+header {
   z-index: 10;
   position: sticky;
   top: 0;
@@ -74,36 +73,31 @@ a {
   display: flex;
   justify-content: space-around;
   color: $light-color;
-  padding: 0 1rem;
-  justify-content: space-around;
 
-  ul {
-    display:flex;
-    justify-content: space-evenly;
-
-    li {
-      @include list-item;
-      @include hover;
-      @include link;
-
-      a {
-        display:inline-block;
-        padding: 1.5rem 0.6rem;
-      }
-    }
+  .logo {
+    padding: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    @include link;
   }
 
-  .menu {
+  #navbar {
+    width: 70%;
     display: flex;
-
-    .logo {
-      padding: 1.3rem;
-      margin: 0 1.0rem;
-      font-size: 1.2rem;
-      font-weight: 600;
-      text-transform: lowercase;
-      @include link;
+    .menu {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      @include link-list;
     }
+
+    
+  }
+  #hamburger {
+    display:none;
   }
 }
 
@@ -115,6 +109,10 @@ a {
   justify-content: center;
   align-items: center;
 
+  .container {
+    align-items: center;
+    text-align: center;
+  }
   &::before{
     content:'';
     position: absolute;
@@ -130,8 +128,8 @@ a {
   }
 
   h1 {
-    font-size: 5.2rem;
-    font-weight: 400;
+    font-size: 5rem;
+    font-weight: 500;
 
     .thin {
       @include thin;
@@ -148,6 +146,7 @@ a {
     font-weight: 400;
     line-height: 2rem;
     opacity: 0.9;
+    border-radius: $border-radius;
 
     .thick {
       @include thick;
@@ -275,7 +274,7 @@ a {
   }
 }
 
-.quote {
+#quote {
   height: 25rem;
   position: relative;
   display:flex;
@@ -366,6 +365,9 @@ a {
         }
   
         img {
+          &:hover {
+            opacity: 0.9;
+          }
           width: 100%;
           height: 100%;
         }
@@ -375,6 +377,80 @@ a {
   }
 }
 
+#contact {
 
+  .boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .box {
+      flex: 1 1 0;
+      width: 0;
+      margin: 0.8rem;
+      background: #fff;
+      border-radius: $border-radius;
+      @include box-shadow;
+      &:hover {
+        background: $primary-color;
+      }
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        color: $dark-color;
+        &:hover {
+          color: $secondary-color;
+        }
+        p {
+          padding-top: 1rem;
+          line-height: 0.5rem;
+        }
+        i {
+          font-size: 2rem;
+        }
+        
+      }
+    }
+  }
+
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  @include link-list;
+
+  ul {
+    li {
+      padding: 3rem 1rem;
+
+      &:hover {
+        background: inherit;
+      }
+      a {
+        color: $dark-color;
+        font-size: 1.5rem;
+      }
+      
+    }
+  }
+
+  .copyright {
+    padding-bottom: 1rem;
+    text-align: center;
+    max-width: 80%;
+    a {
+      color: $dark-font-color;
+      text-decoration: underline;
+    }
+  }
+  
+}
 
 
