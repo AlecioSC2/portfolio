@@ -52,6 +52,12 @@
     width: 100%;
     flex: none;
   }
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
   header #navbar {
     width: 70%;
     flex-direction: column;
@@ -60,6 +66,7 @@
   header #navbar .mobile-wrapper {
     display: flex;
     justify-content: space-between;
+    align-self: auto;
   }
   header #navbar .menu {
     flex-direction: column;
@@ -72,12 +79,20 @@
   }
   header #navbar .menu .navigation {
     flex-direction: column;
+    justify-content: center;
   }
   header #navbar .menu .navigation li {
+    width: 100%;
     border-bottom: 1px dotted #f4f4f4;
+    display: flex;
+    justify-content: center;
+  }
+  header #navbar .menu .navigation li a {
+    padding: 1rem 0.6rem;
   }
   header #navbar .menu .social {
     flex-direction: row;
+    padding: 1rem 0;
   }
   header #navbar .social {
     position: relative;

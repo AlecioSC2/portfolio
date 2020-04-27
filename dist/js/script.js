@@ -1,3 +1,5 @@
+AOS.init();
+
 const tabOnClick = event => {
   event.preventDefault();
   const tab = event.target.dataset.tab; //the tab id
@@ -32,12 +34,27 @@ let isOpen = false;
 const hamburgerOnClick = event => {
   if (!isOpen) {
     isOpen = true;
+    document.querySelector('#navbar .fa-times').classList.remove('hidden-mobile');
+    document.querySelector('#navbar .fa-bars').classList.add('hidden-mobile');
     document.querySelector('#navbar .menu').classList.remove('hidden-mobile');
   } else {
     isOpen = false;
+    document.querySelector('#navbar .fa-times').classList.add('hidden-mobile');
+    document.querySelector('#navbar .fa-bars').classList.remove('hidden-mobile');
     document.querySelector('#navbar .menu').classList.add('hidden-mobile');
 
   }
   
 }
 document.getElementById('hamburger').addEventListener("click", hamburgerOnClick);
+
+
+window.addEventListener("scroll", () => {
+  console.log(window.pageYOffset);
+  if (window.pageYOffset >= 100) {
+    document.getElementsByTagName('header')[0].classList.add('scrolled-header')
+  } else if (window.pageYOffset === 0) {
+    document.getElementsByTagName('header')[0].classList.remove('scrolled-header')
+
+  }
+});

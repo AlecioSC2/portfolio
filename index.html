@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pablo Alecio | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <script src="https://kit.fontawesome.com/8a92de8c2a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./dist/css/main.css">
   <link rel="stylesheet" href="./dist/css/mobile.css">
@@ -14,7 +17,7 @@
     <nav id="navbar">
       <div class="mobile-wrapper">
         <div class="logo"><a href="#">Palec.io</a></div>
-        <div id="hamburger"> <i class="fa fa-bars fa-lg"></i> </div>
+        <div id="hamburger"> <i class="fa fa-bars fa-lg"></i> <i class="fa fa-times fa-lg hidden-mobile"></i> </div>
       </div>
       
       <div class="menu hidden-mobile">
@@ -37,7 +40,7 @@
     </nav>
   </header>
   <main id="main">
-    <div class="container">
+    <div class="container" data-aos="fade-in">
       <h1>Pablo Alecio <span class="thin">(aka Pale)</span></h1>
       <h5>Sr. AEM Consultant <span class="thick">/</span> Full Stack Dev <span class="thick">/</span> StarCraft 2 enthusiast</h5>
       <a href="#about">
@@ -45,7 +48,7 @@
     </div>
   </main>
 
-  <section id="about" >
+  <section id="about" data-aos="fade-in">
     <div class="container">
       <h2 class="section-title">About Me</h2>
       <p class="section-paragraph">Guatemalan born and raised. I have worked for almost 10 years delivering and leading AEM implementations. I'm also a 
@@ -71,12 +74,12 @@
     </div>
   </section>
   <section id="quote">
-    <div class="container">
+    <div class="container" data-aos="fade-in">
       <p>More GG, more skill.</p>
       <span>WhiteRa</span>
     </div>
   </section>
-  <section id="hobbies" class="bg-light">
+  <section id="hobbies" class="bg-light" data-aos="fade-in">
     <div class="container">
       <h2 class="section-title">
         Hobbies
@@ -113,7 +116,7 @@
     </div>
   </section>
   <!-- Projects -->
-  <section id="projects">
+  <section id="projects" data-aos="fade-in">
     <div class="container">
       <h2 class="section-title">Projects</h2>
       <p class="section-paragraph"> 
@@ -128,7 +131,7 @@
     </div>
   </section>
 
-  <section id="contact" class="bg-light">
+  <section id="contact" class="bg-light" data-aos="fade-in">
     <div class="container">
       <h2 class="section-title">Contact Me</h2>
       <p class="section-paragraph"> 
@@ -189,6 +192,7 @@
     <div class="copyright">Copyright © 2020. All rights reserved. | Design inspired in mdbootstrap.com's <a href="https://mdbootstrap.com/previews/templates/portfolio/html/web-developer.html" target="_blank"> Web Developer Portfolio</a>.</div>
   </footer>
   <!-- JavaScript-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="dist/js/script.js"></script>
 </body>
 </html>

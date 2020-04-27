@@ -38,15 +38,20 @@
   ul {
     display:flex;
     justify-content: space-evenly;
-
+    align-items: center;
+    height: 100%;
     li {
       @include list-item;
       @include hover;
       @include link;
+      height: inherit;
 
       a {
-        display:inline-block;
-        padding: 1.5rem 0.6rem;
+        display: flex;
+        align-items: center;
+        height: inherit;
+
+        padding: 0 0.6rem;
       }
     }
   }

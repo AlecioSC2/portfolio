@@ -81,6 +81,10 @@
   }
 
   header {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
     #navbar {
       width: 70%;
       flex-direction: column;
@@ -89,6 +93,7 @@
       .mobile-wrapper {
         display: flex;
         justify-content: space-between;
+        align-self: auto;
       }
       .menu {
         flex-direction: column;
@@ -100,12 +105,20 @@
         }
         .navigation {
           flex-direction: column;
+          justify-content: center;
           li {
+            width: 100%;
             border-bottom: 1px dotted $light-color;
+            display: flex;
+            justify-content: center;
+            a { 
+              padding: 1rem 0.6rem;
+            }
           }
         }
         .social {
           flex-direction: row;
+          padding: 1rem 0;
         }
       }
   
