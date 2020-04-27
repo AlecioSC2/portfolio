@@ -1,12 +1,11 @@
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 @media only screen and (max-width: 768px) {
-
-  .hidden-mobile{
-    display: none!important;
+  .hidden-mobile {
+    display: none !important;
   }
-  
+
   .container {
     width: 80%;
   }
@@ -20,8 +19,8 @@
       font-size: 4rem;
       span {
         &:before {
-          content: "\A"; 
-          white-space: pre; 
+          content: "\A";
+          white-space: pre;
         }
       }
     }
@@ -29,12 +28,12 @@
     h5 {
       span {
         opacity: 0;
-        &:after{
-          content: "\A"; 
-          white-space: pre; 
+        &:after {
+          content: "\A";
+          white-space: pre;
         }
       }
-      
+
       margin-top: 2rem;
     }
   }
@@ -42,7 +41,7 @@
   #about {
     .boxes {
       flex-direction: column;
-      
+
       .box {
         margin: 0.5rem;
       }
@@ -82,8 +81,8 @@
 
   header {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     #navbar {
       width: 70%;
@@ -111,7 +110,7 @@
             border-bottom: 1px dotted $light-color;
             display: flex;
             justify-content: center;
-            a { 
+            a {
               padding: 1rem 0.6rem;
             }
           }
@@ -121,16 +120,15 @@
           padding: 1rem 0;
         }
       }
-  
+
       .social {
-        position:relative;
+        position: relative;
         justify-content: center;
         flex-direction: column;
-        
+
         ul {
           display: flex;
         }
-        
       }
 
       #hamburger {
@@ -138,7 +136,6 @@
         align-items: center;
       }
     }
-    
   }
 
   footer {
@@ -150,12 +147,9 @@
       }
     }
   }
-  
-
 }
 
 @media only screen and (max-width: 600px) {
-
   #main {
     h5 {
       span {
@@ -164,7 +158,7 @@
     }
   }
   #hobbies {
-    .box{
+    .box {
       justify-content: flex-start;
       flex-direction: column;
       min-height: 30rem;
@@ -175,5 +169,4 @@
       margin-top: 4rem;
     }
   }
-
 }

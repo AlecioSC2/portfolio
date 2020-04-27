@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 * {
   margin: 0;
@@ -8,9 +8,8 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: $dark-font-color;
-
 }
 
 p {
@@ -47,7 +46,7 @@ a {
 }
 
 .hidden {
-  display: none!important;
+  display: none !important;
 }
 
 .section-title {
@@ -59,15 +58,15 @@ a {
 }
 
 .section-paragraph {
-    text-align: center;
-    margin-bottom: 1rem;
-    padding: 1rem 5rem;
-  }
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem 5rem;
+}
 
-  .scrolled-header {
-    height: 3rem;
-    opacity: 0.9;
-  }
+.scrolled-header {
+  height: 3rem;
+  opacity: 0.9;
+}
 
 header {
   z-index: 10;
@@ -103,29 +102,27 @@ header {
       align-items: center;
       @include link-list;
     }
-
-    
   }
   #hamburger {
-    display:none;
+    display: none;
   }
 }
 
 #main {
   height: 98vh;
   position: relative;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: -3rem;
-  
+
   .container {
     align-items: center;
     text-align: center;
   }
-  &::before{
-    content:'';
+  &::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -133,7 +130,7 @@ header {
     width: 100%;
     height: 100%;
     opacity: 0.5;
-    background: url('./img/background.jpg') center center/cover;
+    background: url("./img/background.jpg") center center/cover;
     background-attachment: fixed;
     z-index: -1;
   }
@@ -141,17 +138,17 @@ header {
   h1 {
     font-size: 5rem;
     font-weight: 500;
-    
+
     .thin {
       @include thin;
     }
   }
 
   h5 {
-    display:block;
+    display: block;
     background: $primary-color;
     margin-top: 1.5rem;
-    padding: .4rem 1.2rem;
+    padding: 0.4rem 1.2rem;
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 400;
@@ -164,9 +161,9 @@ header {
       font-size: 2rem;
     }
   }
-  
+
   a {
-    display:block;  
+    display: block;
     margin: 6rem;
     background: $dark-color;
     padding: 1rem;
@@ -174,7 +171,6 @@ header {
   }
 
   @include link;
-
 }
 
 #about {
@@ -204,7 +200,6 @@ header {
       border-radius: $border-radius;
       @include box-shadow;
 
-
       h3 {
         padding-top: 1rem;
         text-transform: uppercase;
@@ -214,16 +209,11 @@ header {
         padding: 1rem;
         font-weight: 300;
       }
-
     }
-
   }
-
-
 }
 
 #hobbies {
-  
   .tabs {
     display: flex;
     flex-direction: row;
@@ -236,11 +226,11 @@ header {
     opacity: 1;
     min-height: 3rem;
     z-index: 1;
-    
+
     @include box-shadow;
-    
+
     .tab {
-      display:block;
+      display: block;
       @include link;
       width: 100%;
       display: flex;
@@ -255,27 +245,25 @@ header {
 
         padding: 0.5rem;
         &.selected {
-          background: rgba(0,0,0,.2);
+          background: rgba(0, 0, 0, 0.2);
         }
       }
-      
     }
   }
-
 
   .box {
     @include box-shadow;
     min-height: 10rem;
     min-width: 100%;
     border-radius: $border-radius;
-    display:flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-top: -1.5rem;
     padding: 2rem 4rem;
     color: $dark-font-color;
-    background: #FFF;
+    background: #fff;
 
     i {
       margin: 3rem;
@@ -288,13 +276,13 @@ header {
 #quote {
   height: 25rem;
   position: relative;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  &::before{
-    content:'';
+  &::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -302,7 +290,7 @@ header {
     width: 100%;
     height: 100%;
     opacity: 0.8;
-    background: url('./img/sc-bg.jpg') center center/cover;
+    background: url("./img/sc-bg.jpg") center center/cover;
     background-attachment: fixed;
     z-index: -1;
   }
@@ -314,7 +302,7 @@ header {
   p {
     font-size: 4rem;
     color: $light-color;
-    @include text-shadow;        
+    @include text-shadow;
     &::before {
       content: '"';
     }
@@ -322,20 +310,18 @@ header {
     &::after {
       content: '"';
     }
-
   }
 
   span {
     color: $light-color;
     font-size: 2rem;
-    text-shadow: 1px 1px 2px $dark-font-color; 
+    text-shadow: 1px 1px 2px $dark-font-color;
     margin-left: 28rem;
 
     &::before {
-      content: '- ';
+      content: "- ";
     }
   }
-
 }
 
 #projects {
@@ -362,8 +348,8 @@ header {
           padding: 1rem;
 
           &::before {
-            content: '';
-            position:absolute;
+            content: "";
+            position: absolute;
             width: 100%;
             height: 100%;
             top: 0;
@@ -372,9 +358,8 @@ header {
             background: $dark-color;
             opacity: 0.6;
           }
-
         }
-  
+
         img {
           &:hover {
             opacity: 0.9;
@@ -383,13 +368,11 @@ header {
           height: 100%;
         }
       }
-      
     }
   }
 }
 
 #contact {
-
   .boxes {
     display: flex;
     flex-direction: row;
@@ -401,7 +384,7 @@ header {
       background: #fff;
       border-radius: $border-radius;
       @include box-shadow;
-      &:hover {
+      &:hover  {
         background: $primary-color;
       }
       a {
@@ -423,11 +406,9 @@ header {
         i {
           font-size: 2rem;
         }
-        
       }
     }
   }
-
 }
 
 footer {
@@ -448,7 +429,6 @@ footer {
         color: $dark-color;
         font-size: 1.5rem;
       }
-      
     }
   }
 
@@ -461,7 +441,4 @@ footer {
       text-decoration: underline;
     }
   }
-  
 }
-
-

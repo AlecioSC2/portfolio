@@ -27,16 +27,16 @@
 }
 
 @mixin box-shadow {
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-@mixin text-shadow{
-  text-shadow: 1px 1px 2px $dark-font-color; 
+@mixin text-shadow {
+  text-shadow: 1px 1px 2px $dark-font-color;
 }
 
 @mixin link-list {
   ul {
-    display:flex;
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
