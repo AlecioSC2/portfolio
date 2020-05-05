@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pablo Alecio | Portfolio</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -16,10 +16,11 @@
 
     <script
       src="https://kit.fontawesome.com/8a92de8c2a.js"
+      async
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./dist/css/main.css" />
-    <link rel="stylesheet" href="./dist/css/mobile.css" />
+    <link rel="stylesheet" href="./dist/css/main.min.css" />
+    <link rel="stylesheet" href="./dist/css/mobile.min.css" />
   </head>
   <body>
     <header>
@@ -185,13 +186,18 @@
         <div class="gallery">
           <figure class="image">
             <a href="https://github.com/PaleSC2/nova-core" target="_blank"
-              ><img src="./images/Nova-Core.jpg" alt="Nova Core" />
+              >
+              <picture>
+                <source type="image/jpeg" media="(min-width: 769px)" srcset="images/Nova-Core.jpg">
+                <source type="image/jpeg" media="(max-width: 768px)" srcset="images/Nova-Firebase.jpg">
+                <img src="images/Nova-Core.jpg" alt="Nova Core" />
+              </picture>
               <figcaption>Nova Core</figcaption></a
             >
           </figure>
           <figure class="image">
             <a href="https://github.com/PaleSC2/nova-server" target="_blank"
-              ><img src="./images/Nova-Server.jpg" alt="Nova Server" />
+              ><img src="images/Nova-Server.jpg" alt="Nova Server" />
               <figcaption>Nova Server</figcaption></a
             >
           </figure>
